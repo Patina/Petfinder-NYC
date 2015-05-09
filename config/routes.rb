@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  #resources :Petfinders
   
+  get 'shelters/index'
+
+  resources :shelters
+  resources :cats
+  resources :dogs
   root 'welcome#index'
 end

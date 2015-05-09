@@ -1,0 +1,18 @@
+<h1>All Pets in New York City</h1>
+
+
+
+<p>Below is a list of cats!</p>
+<ul>
+	<% @cats.each do |cat| %>
+		<li>
+			<img src=<%= cat.photos.first.small unless cat.photos.empty? %> alt="">
+			<%= cat.name %>
+			<%= link_to 'See this pet!', cat_path(cat.id) %>
+		</li>
+	<% end %>
+</ul>
+
+<!-- <p>Age of pet is </p>
+
+<p></p> -->

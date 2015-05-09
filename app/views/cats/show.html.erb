@@ -1,0 +1,32 @@
+<h1>Here is the cat you clicked on!</h1>
+
+<h2><%= @cat.name %></h2>
+
+
+<% @cat.photos.each do |photo| %>
+	<img src=<%= photo.large %> alt="">
+<% end %>
+
+<!-- iterate over the photos!-->
+
+<p><%= @cat.breeds %></p>
+<p><%= @cat.age %></p>
+<p><%= @cat.sex %></p>
+<p><%= @cat.size %></p>
+<p><%= @cat.shelter_id %></p>
+<p><%= @cat.status %></p>
+<p><%= @cat.description %></p>
+<p><%= @cat.contact %></p>
+
+
+
+
+<% if false %>
+	<ul><% @pets.each do |pet| %>
+		<li><img src=<%= @anything_pet.pet(pet.id).photos.first.small %> alt=""></li>
+		<% end %>
+	</ul>	
+
+	<h2><%= @this_pet %></h2>
+<% end %>
+
